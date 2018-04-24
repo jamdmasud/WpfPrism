@@ -1,0 +1,35 @@
+﻿<Window x:Class="NybSys.Client.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://www.codeplex.com/prism"
+        xmlns:local="clr-namespace:NybSys.Client"        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        mc:Ignorable="d"
+        Title="NybSys" Height="350" Width="525">
+    <Grid x:Name="LayoutRoot"
+          Background="Black">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Background="White" Grid.Row="0"  Orientation="Horizontal">
+                <DockPanel>
+                    <smtx:XamlDisplay Key="profile_menus" DockPanel.Dock="Top">
+                       
+                        <Menu IsMainMenu="True">
+                            <!--<MenuItem Header="_File" x:Name="NavigationItemsControl"  Padding="5"   Style="{StaticResource menuParentStyle}"  ItemContainerStyle="{DynamicResource MenuItemStyle1}"  Template="{DynamicResource MenuItemControlTemplate2}" >-->
+                            <MenuItem Header="_File" prism:RegionManager.RegionName="MainNavigationRegion"  x:Name="NavigationItemsControl" />
+                        </Menu>
+                    </smtx:XamlDisplay>
+
+                </DockPanel>                
+            </StackPanel>
+            <ContentControl prism:RegionManager.RegionName="MainContentRegion" Grid.Row="1" Margin="0,0,5,5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</Window>

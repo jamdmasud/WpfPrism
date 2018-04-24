@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="NybSys.Profile.Views.ProfileViewNavigationMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:NybSys.Profile.Views" 
+             xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+             mc:Ignorable="d" >
+    <StackPanel Orientation="Vertical">
+
+        <!--<MenuItem Width="200" x:Name="NavigateToProfileRadioButton"  Click="NavigateToProfileRadioButton_Click" Header="Create Profile"  Style="{StaticResource menuParentStyle}"  ItemContainerStyle="{DynamicResource MenuItemStyle1}"  Template="{DynamicResource MenuItemControlTemplate2}"  />-->
+        <!--<RadioButton x:Name="NavigateToProfileRadioButton" GroupName="MainNavigation" Click="NavigateToProfileRadioButton_Click" Style="{StaticResource MainViewRadioButtonStyle}" AutomationProperties.AutomationId="EmailRadioButton">Profile</RadioButton>-->
+        <MenuItem Width="200" x:Name="NavigateToViewProfileRadioButton" Click="NavigateToViewProfileRadioButton_Click" Header="View Profile" />
+    </StackPanel>
+</UserControl>
