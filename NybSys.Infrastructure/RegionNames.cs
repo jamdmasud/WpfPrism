@@ -8,5 +8,6 @@ namespace NybSys.Infrastructure
     {
         public const String MainContentRegion = "MainContentRegion";
         public const String MainNavigationRegion = "MainNavigationRegion";
+        public const String AdminNavigationRegion = "AdminNavigationRegion";
     }
 }

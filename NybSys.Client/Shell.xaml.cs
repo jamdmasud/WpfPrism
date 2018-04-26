@@ -24,7 +24,7 @@ namespace NybSys.Client
         public IModuleManager ModuleManager;
 
         [Import(AllowRecomposition = false)]
-        public IRegionManager RegionManager;
+        public IRegionManager regionManager;
 
         public void OnImportsSatisfied()
         {
@@ -33,11 +33,21 @@ namespace NybSys.Client
              {
                  if (e.ModuleInfo.ModuleName == ProfileModuleName)
                  {
-                     this.RegionManager.RequestNavigate(
+                     this.regionManager.RequestNavigate(
                          RegionNames.MainContentRegion,
                          InboxViewUri);
                  }
              };
+        }
+        
+        private void viewProfile_Click(object sender, RoutedEventArgs e)
+        {
+            this.regionManager.RequestNavigate(RegionNames.MainContentRegion, "/ViewProfile");
+        }
+
+        private void createProfile_Click(object sender, RoutedEventArgs e)
+        {
+            this.regionManager.RequestNavigate(RegionNames.MainContentRegion, InboxViewUri);
         }
     }
 }

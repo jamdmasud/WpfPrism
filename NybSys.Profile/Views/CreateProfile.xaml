@@ -4,9 +4,57 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NybSys.Profile.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+             Background="WhiteSmoke"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock Text=" Profile is creating" FontSize="23" Foreground="Red" />
-    </Grid>
+    
+    <Border>
+        <StackPanel>
+            <GroupBox
+              Header="Profile Information"
+              Style="{DynamicResource MaterialDesignCardGroupBox}"
+              Margin="16">
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                          Kind="Account"
+                                          Height="24"
+                                          Width="24"
+                                          VerticalAlignment="Center" />
+                            <TextBlock
+                                          Margin="8,0,0,0"
+                                          VerticalAlignment="Center"
+                                          Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                          Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+                <Border Margin="10">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0"  Padding="3"  Text="Name:" TextAlignment="Right" HorizontalAlignment="Center"/>
+                            <TextBox Grid.Column="1" x:Name="NameTextBox" Padding="3" BorderBrush="FloralWhite" BorderThickness="2"
+                                materialDesign:HintAssist.Hint="Name">
+                                <TextBox.Text>
+                                    <Binding
+                                  Path="Name"
+                                  UpdateSourceTrigger="PropertyChanged">
+
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </Grid>
+                        
+                    </StackPanel>
+                </Border>
+            </GroupBox>
+        </StackPanel>
+    </Border>
 </UserControl>

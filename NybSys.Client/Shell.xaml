@@ -8,9 +8,10 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
         mc:Ignorable="d"
-        Title="NybSys" Height="350" Width="525">
-    <Grid x:Name="LayoutRoot"
-          Background="Black">
+        Background="WhiteSmoke"
+        Title="NybSys" Height="550" Width="825"
+        WindowState="Maximized">
+    <Grid x:Name="LayoutRoot">
         <Grid>
 
             <Grid.RowDefinitions>
@@ -23,7 +24,44 @@
                        
                         <Menu IsMainMenu="True">
                             <!--<MenuItem Header="_File" x:Name="NavigationItemsControl"  Padding="5"   Style="{StaticResource menuParentStyle}"  ItemContainerStyle="{DynamicResource MenuItemStyle1}"  Template="{DynamicResource MenuItemControlTemplate2}" >-->
-                            <MenuItem Header="_File" prism:RegionManager.RegionName="MainNavigationRegion"  x:Name="NavigationItemsControl" />
+                            <MenuItem Header="_File" x:Name="NavigationItemsControl" >
+                                <MenuItem Header="_New" x:Name="createProfile" Click="createProfile_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="AccountPlus" />
+                                    </MenuItem.Icon>
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="WhiteSmoke" Text="Create employee profile."></TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
+                                <MenuItem Header="_Open" x:Name="viewProfile" Click="viewProfile_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="ViewGrid" />
+                                    </MenuItem.Icon>
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="WhiteSmoke" Text="Open employee profile from central database."></TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_Admin" x:Name="AdminNavigationItemsControl" >
+                                <MenuItem Header="_Approve">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="CheckboxMarkedCircleOutline" />
+                                    </MenuItem.Icon>
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="WhiteSmoke" Text="Approve employee profile to store in central database."></TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="_View">
+                                <MenuItem Header="_Find">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Kind="FileFind" />
+                                    </MenuItem.Icon>
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="WhiteSmoke" Text="Search employee profile from central database."></TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
+                            </MenuItem>
                         </Menu>
                     </smtx:XamlDisplay>
 

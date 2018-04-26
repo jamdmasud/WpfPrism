@@ -15,8 +15,9 @@ namespace NybSys.Profile
 
         public void Initialize()
         {
-            this.regionManager.RegisterViewWithRegion(RegionNames.MainNavigationRegion, typeof(ProfileNavigationMenu));
-            this.regionManager.RegisterViewWithRegion(RegionNames.MainNavigationRegion, typeof(ProfileViewNavigationMenu));
+            //this.regionManager.RegisterViewWithRegion(RegionNames.MainNavigationRegion, typeof(ProfileNavigationMenu));
+            //this.regionManager.RegisterViewWithRegion(RegionNames.MainNavigationRegion, typeof(ProfileViewNavigationMenu));
+            //this.regionManager.RegisterViewWithRegion(RegionNames.AdminNavigationRegion, typeof(AdminNavigationMenu));
         }
     }
 }

@@ -4,9 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NybSys.Profile.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+             Background="WhiteSmoke"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <TextBlock Text=" Profile is Showing" FontSize="23" Foreground="Red" />
+             d:DesignHeight="400" d:DesignWidth="600">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text=" Profile is creating" FontSize="23" Foreground="Red" />
     </Grid>
 </UserControl>
